@@ -24,4 +24,9 @@ const greetFriends = (friend1:string, friend2: string, friend3: string) => {
     return friend1 + " " + friend2 + " " + friend3
 }
 const ok = greetFriends('Good Mornings', 'Good afternoon', 'Good night')
-console.log(ok)
+
+const calculate = (num1:number, num2: number, operation:(x: number, y:number) => number ) => {
+    return operation(num1 , num2)
+}
+const result = calculate(22, 33, (x,y) => x - y)
+console.log(result)
