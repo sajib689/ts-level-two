@@ -25,8 +25,10 @@ const greetFriends = (friend1:string, friend2: string, friend3: string) => {
 }
 const ok = greetFriends('Good Mornings', 'Good afternoon', 'Good night')
 
-const calculate = (num1:number, num2: number, operation:(x: number, y:number) => number ) => {
+
+type Operation = (x: number, y: number) => number
+const calculate = (num1:number, num2: number, operation: Operation) => {
     return operation(num1 , num2)
 }
-const result = calculate(22, 33, (x,y) => x - y)
+const result = calculate(250, 33, (x,y) => x - y)
 console.log(result)
