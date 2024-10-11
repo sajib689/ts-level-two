@@ -9,5 +9,17 @@ type JuniorDeveloper = {
 
 const newDeveloper: NoobDeveloper | JuniorDeveloper = {
     name: 'Rupali',
+    expertise: 'Javascript Developer',
+    experience: 3,
 }
-console.log(newDeveloper)
+
+type NextLevelDeveloper = JuniorDeveloper & {
+    leadershipExperience: number,
+}
+const developer: NextLevelDeveloper = {
+    name: 'Rupali Developer',
+    expertise: 'TypeScript Developer',
+    experience: 3,
+    leadershipExperience: 4,
+}
+console.log(developer)
